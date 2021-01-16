@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Methodic-random</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="scripts/chart.min.js"></script>
+    <script src="scripts/core.js"></script>
+    <script src="scripts/algorithm.js" defer></script>
+</head>
+<body>
+<br>
+<div class="container">
+    <div class="row">
+        <form class="col-md-3">
+            <div class="form-group">
+                <input type="text" class="form-control" id="userMin" placeholder="Введите MIN значение">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="userMax" placeholder="Введите MAX значение">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="userLimit" placeholder="Введите допустимый коэффициент">
+            </div>
+            <div class="form-group">
+                <label class="radio-inline">
+                    <input type="radio" name="numbersType" id="isNumbersFloat" checked> Дробные числа
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="numbersType"> Целые числа
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary" id="runBtn">Запустить алгоритм</button>
+            <div id="circularG" class="spinner">
+                <div id="circularG_1" class="circularG"></div>
+                <div id="circularG_2" class="circularG"></div>
+                <div id="circularG_3" class="circularG"></div>
+                <div id="circularG_4" class="circularG"></div>
+                <div id="circularG_5" class="circularG"></div>
+                <div id="circularG_6" class="circularG"></div>
+                <div id="circularG_7" class="circularG"></div>
+                <div id="circularG_8" class="circularG"></div>
+            </div>
+        </form>
+        <div class="col-md-3">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="active">
+                        <th>№</th>
+                        <th>Xi</th>
+                        <th>d(Xi - Xср)</th>
+                        <th>d2</th>
+                    </tr>
+                </thead>
+                <tbody id="outputTable"></tbody>
+            </table>
+        </div>
+        <pre class="col-md-1" id="outputPre"></pre>
+        <div class="col-md-5">
+            <canvas id="myChart"></canvas><br>
+            <div id="result"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
